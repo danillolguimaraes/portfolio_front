@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sofadi+One&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="fixed-top">
+    <div id="menu">
+      <div class="content">
+        <div class="controle">
+          <div id="btn-cor">
+            <div class="ball"></div>
+          </div>
+        </div>
+        <navbar>
+          <ul id="nav-menu" class="menu-inativo">
+            <li>
+              <button class="botao-ativo" id="button-home"
+                onclick="setActiveButton('button-home'); document.getElementById('sectionProfile').scrollIntoView({ behavior: 'smooth' })">Início</button>
+            </li>
+            <li>
+              <button class="botao-normal" id="button-about"
+                onclick="setActiveButton('button-about'); document.getElementById('sectionAbout').scrollIntoView({ behavior: 'smooth' })">Sobre</button>
+            </li>
+            <li>
+              <button class="botao-normal" id="button-projects"
+                onclick="setActiveButton('button-projects'); document.getElementById('Projetos').scrollIntoView({ behavior: 'smooth' })">Projetos</button>
+            </li>
+            <li>
+              <button class="botao-normal" id="button-contact"
+                onclick="setActiveButton('button-contact'); document.getElementById('Contatos').scrollIntoView({ behavior: 'smooth' })">Contato</button>
+            </li>
+          </ul>
+          <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- ícone de menu hamburguer -->
+          </button>
+        </navbar>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="sectionProfile">
+      <div class="content">
+        <div class="call">
+          <div class="chamada1">
+            <h1 id="saudacao" class="linha"></h1>
+            <h1 id="meuNome" class="meuNome"></h1>
+            <p id="profissao"></p>
+          </div><!--chamada1-->
+          <div class="art">
+            <div class="art1">
+              <img src="./dist/img/cubo.gif">
+            </div><!--art1-->
+          </div><!--art-->
+        </div><!--call-->
+
+        <div class="meio">
+          <div class="lustre">
+            <p class="raio" id="btn-cor2"></p>
+          </div><!--lustre-->
+          <div class="chamada2"></div>
+        </div><!--meio-->
+
+        <div class="perfil">
+          <a href="https://github.com/danillolguimaraes">
+            <div class="avatar"></div>
+          </a>
+          <p></p>
+        </div><!--perfil-->
+      </div><!--content-->
+    </section><!--SectionPerfil-->
+    <section id="sectionAbout">
+      <div class="content">
+        <div class="maisSobre">
+          <h2 class="hper">Sobre mim</h2>
+          <p>Minha jornada no mundo da tecnologia começou cedo, aos 11 anos, e desde então não parei mais. Atualmente,
+            acumulo diversas certificações e formações na área, incluindo a Formação Full Stack Python pela Escola
+            Britânica de Artes Criativas e Tecnologia (EBAC).
+
+            O que me diferencia é um princípio que aprendi durante meu período de serviço no Exército Brasileiro,
+            guiado
+            pelo lema:
+            "Tudo que deve ser feito, merece ser bem feito". Esse valor molda a forma como atuo hoje como Analista de
+            Sistemas. Em
+            menos de um ano na empresa, fui promovido a Líder de Suporte, o que reflete meu compromisso em equilibrar
+            a
+            liderança
+            com a disposição de colocar a mão na massa.
+
+            Sigo sempre aprimorando minhas habilidades, transitando entre a gestão e a execução com dedicação genuína.
+          </p>
+
+          <!--Habilidades-->
+
+          <div class="habilidades">
+            <br />
+
+            <h2 class="hper">Habilidades</h2>
+            <div class="skills">
+              <div id="html">
+                <p>Html</p>
+              </div>
+              <div id="css">
+                <p>CSS</p>
+              </div>
+              <div id="js">
+                <p>JS</p>
+              </div>
+              <div id="bp">
+                <p>BP</p>
+              </div>
+              <div id="wp">
+                <p>WP</p>
+              </div>
+              <div id="sass">
+                <p>Sass</p>
+              </div>
+              <div id="less">
+                <p>Less</p>
+              </div>
+              <div id="grunt">
+                <p>Grnt</p>
+              </div>
+              <div id="gulp">
+                <p>Gulp</p>
+              </div>
+              <div id="figma">
+                <p>Figma</p>
+              </div>
+              <div id="react">
+                <p>React</p>
+              </div>
+              <div id="vuejs">
+                <p>vJS</p>
+              </div>
+              <div id="python">
+                <p>PY</p>
+              </div>
+              <div id="django">
+                <p>Djng</p>
+              </div>
+            </div>
+          </div>
+          <center>
+            <p id="resp" style="padding-bottom: 64px;">
+            </p>
+          </center>
+
+        </div>
+    </section>
+    <section id="Projetos">
+      <div class="content">
+        <div class="pcenter">
+          <h2>Projetos</h2>
+        </div>
+        <div class="ptitle">
+          <h3>Destaques</h3>
+        </div>
+        <div class="pcontent">
+          <a href="https://clone-disneyplus-seven-beryl.vercel.app/" target="_blank">
+            <div class="card text-bg-dark">
+              <div class="overlay"></div>
+              <img src="./dist/img/Disney.png" class="card-img" alt="Projeto Disney">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Clone Disney Projeto</h5>
+                <p class="card-text"></p>
+              </div>
+          </a>
+        </div><!--card1-->
+        <div class="card text-bg-dark">
+          <a href="https://e-food-steel.vercel.app/" target="_blank">
+            <div class="overlay"></div>
+            <img src="./dist/img/Efood.png" class="card-img" alt="Projeto Efood">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Efood - Cozinhas Típicas Projeto</h5>
+              <p class="card-text"></p>
+            </div>
+          </a>
+        </div><!--card2-->
+        <div class="card text-bg-dark">
+          <a href="https://eplay-one.vercel.app/" target="_blank">
+            <div class="overlay"></div>
+            <img src="./dist/img/Eplay Loja de Jogos.png" class="card-img" alt="Projeto Eplay">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Eplay - Loja de Jogos Projeto</h5>
+              <p class="card-text"></p>
+            </div>
+          </a>
+        </div><!--card3-->
+        <!--Fim destaques-->
+      </div>
+      <div class="ptitle">
+        <h3>Todos</h3>
+      </div>
+      <div class="pcontent">
+        <a href="https://www.litoralpostos.com.br/" target="_blank">
+          <div class="card text-bg-dark">
+            <div class="overlay"></div>
+            <img src="./dist/img/Litoralpostos.png" class="card-img" alt="Cliente Litoral Postos">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Litoral Postos - Cliente</h5>
+              <p class="card-text"></p>
+            </div>
+        </a>
+      </div><!--card1-->
+      <div class="card text-bg-dark">
+        <a href="https://leech-oficial-ragnarok.com.br/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Leechprogamer.png" class="card-img" alt="Cliente Leech PRO Gamer">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Leech PRO Gamer - Cliente</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card2-->
+      <div class="card text-bg-dark">
+        <a href="https://projeto-imobiliaria-three.vercel.app/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Imobiliaria.png" class="card-img" alt="Projeto Imobiliaria">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Imobiliária Projeto</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card3-->
+      <div class="card text-bg-dark">
+        <a href="https://site-games-shop-wheat.vercel.app/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/GamesShop.png" class="card-img" alt="Projeto GamesShop">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Games Shop Projeto</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card4-->
+      <div class="card text-bg-dark">
+        <a href="https://projeto-restaurante-bs.vercel.app/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Restaurante2.png" class="card-img" alt="Projeto Restaurante 2">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Restaurante Projeto</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card5-->
+      <div class="card text-bg-dark">
+        <a href="https://danilloneo.pythonanywhere.com/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Twitter.png" class="card-img" alt="Projeto Twitter">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Clone X Projeto</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card6-->
+      <div class="card text-bg-dark">
+        <a href="https://todo-vue-list-seven.vercel.app/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Todolisttarefas.png" class="card-img" alt="Projeto Lista de Tarefas">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Todo Lista de Tarefas Projeto</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card7-->
+      <div class="card text-bg-dark">
+        <a href="https://meu-casamento.vercel.app/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Casamento.png" class="card-img" alt="Projeto Casamento">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Meu Casamento Projeto Real</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card8-->
+      <div class="card text-bg-dark">
+        <a href="https://sorteadorgruntdanillo.vercel.app/" target="_blank">
+          <div class="overlay"></div>
+          <img src="./dist/img/Sorteador.png" class="card-img" alt="Projeto Sorteador">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Sorteador Número Projeto</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div><!--card9-->
+      </div><!--pcontent-->
+    </section>
+    <section id="Objetivo">
+      <div class="content">
+        <h2 class="hper">Mais informações</h2>
+        <p>Hoje trabalho como analista de sistemas em uma empresa no Litoral de São Paulo, onde
+          atuo nas mais diversificadas áreas trazendo soluções
+          tecnológicas, automação da automação, suporte, inovação e muito mais. Porém também estudo diáriamente
+          programação, e hoje me encontro em um processo de transição de carreira.
+          Tenha a certeza que você vai receber de mim muito mais do que um programador, mas um parceiro leal, um sócio
+          trabalhador. Meu forte atualmente é o front end, mas desenvolvo alguns projetos já com back end em Python.
+          Aguardo seu contato.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <section id="Contatos">
+        <div class="content">
+          <h2>Contatos</h2>
+
+          <p>Email: danillo.lgm@gmail.com</p>
+          <div class="icones">
+            <a href="https://github.com/Danilloneo/" target="_blank">
+              <i class="fa-brands fa-github git"></i>
+            </a>
+            <a href="https://www.instagram.com/danilloneo/" target="_blank">
+              <i class="fa-brands fa-instagram insta"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/danillo-lopes/" target="_blank">
+              <i class="fa-brands fa-linkedin linke"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+  </main>
+  <script src="https://kit.fontawesome.com/875b9c9e59.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // efeito menu clica e muda de cor
+    function setActiveButton(activeButtonId) {
+      // Seleciona todos os botões dentro do nav-menu
+      const buttons = document.querySelectorAll('#nav-menu button');
+
+      // Para cada botão, remova a classe botao-ativo e adicione botao-normal
+      buttons.forEach(button => {
+        button.classList.remove('botao-ativo');
+        button.classList.add('botao-normal');
+      });
+
+      // Adiciona a classe botao-ativo ao botão que foi clicado
+      const activeButton = document.getElementById(activeButtonId);
+      if (activeButton) {
+        activeButton.classList.remove('botao-normal'); // Remove a classe botao-normal
+        activeButton.classList.add('botao-ativo');     // Adiciona a classe botao-ativo
+      }
+    }
+
+
+    //habilidades
+
+    var aresp = document.getElementById('resp');
+
+    // Adiciona os eventos de clique para cada elemento
+    var ht = document.getElementById('html').addEventListener('click', resposta);
+    var cs = document.getElementById('css').addEventListener('click', resposta);
+    var javs = document.getElementById('js').addEventListener('click', resposta);
+    var bootstrap = document.getElementById('bp').addEventListener('click', resposta);
+    var wordpress = document.getElementById('wp').addEventListener('click', resposta);
+    var sass = document.getElementById('sass').addEventListener('click', resposta);
+    var less = document.getElementById('less').addEventListener('click', resposta);
+    var grunt = document.getElementById('grunt').addEventListener('click', resposta);
+    var gulp = document.getElementById('gulp').addEventListener('click', resposta);
+    var figma = document.getElementById('figma').addEventListener('click', resposta);
+    var react = document.getElementById('react').addEventListener('click', resposta);
+    var Vjs = document.getElementById('vuejs').addEventListener('click', resposta);
+    var python = document.getElementById('python').addEventListener('click', resposta);
+    var django = document.getElementById('django').addEventListener('click', resposta);
+
+    function resposta(event) {
+      // Se o clique for no parágrafo, impede a propagação para garantir que a div seja reconhecida
+      if (event.target.tagName.toLowerCase() === 'p') {
+        event.stopPropagation();
+        elementId = event.target.parentElement.id; // Usa o id da div pai do <p>
+      } else {
+        elementId = event.currentTarget.id; // Usa o id da div diretamente
+      }
+
+      // Condições para exibir a resposta
+      if (elementId === 'html') {
+        aresp.textContent = 'HTML é a estrutura básica das páginas web.';
+      } else if (elementId === 'css') {
+        aresp.textContent = 'CSS estiliza páginas web visualmente.';
+      } else if (elementId === 'js') {
+        aresp.textContent = 'JavaScript adiciona interatividade às páginas web.';
+      } else if (elementId === 'bp') {
+        aresp.textContent = 'Bootstrap facilita o design de sites responsivos.';
+      } else if (elementId === 'wp') {
+        aresp.textContent = 'WordPress é uma plataforma popular para blogs e sites.';
+      } else if (elementId === 'sass') {
+        aresp.textContent = 'Sass é um pré-processador CSS com funcionalidades avançadas.';
+      } else if (elementId === 'less') {
+        aresp.textContent = 'Less simplifica a escrita de CSS com variáveis e funções.';
+      } else if (elementId === 'grunt') {
+        aresp.textContent = 'Grunt automatiza tarefas comuns em desenvolvimento web.';
+      } else if (elementId === 'gulp') {
+        aresp.textContent = 'Gulp é uma ferramenta de automação de tarefas eficiente.';
+      } else if (elementId === 'figma') {
+        aresp.textContent = 'Figma é usado para design e prototipagem colaborativa.';
+      } else if (elementId === 'react') {
+        aresp.textContent = 'React é uma biblioteca JavaScript para interfaces de usuário.';
+      } else if (elementId === 'vuejs') {
+        aresp.textContent = 'Vue.js é um framework JavaScript para aplicações web dinâmicas.';
+      } else if (elementId === 'python') {
+        aresp.textContent = 'Python é uma linguagem de programação versátil e poderosa.';
+      } else if (elementId === 'django') {
+        aresp.textContent = 'Django é um framework web poderoso para Python.';
+      }
+    }
+
+
+    //hamburguer
+
+    function toggleMenu() {
+      console.log('Clicado');
+      var menu = document.getElementById('nav-menu');
+      if (menu.classList.contains('menu-inativo')) {
+        menu.classList.remove('menu-inativo');
+      } else {
+        menu.classList.add('menu-inativo');
+      }
+    }
+
+    // Selecione o botão inteiro ao invés da bola
+    document.querySelector('#btn-cor').addEventListener('click', () => {
+      // Mova a bola
+      document.querySelector('.ball').classList.toggle('ball-move');
+
+      // Adicione ou remova a classe de tema escuro no body
+      document.body.classList.toggle('dark');
+    });
+
+    document.querySelector('#btn-cor2').addEventListener('click', () => {
+      // Mova a bola
+      document.querySelector('.ball').classList.toggle('ball-move');
+
+      // Adicione ou remova a classe de tema escuro no body
+      document.body.classList.toggle('dark');
+    });
+
+
+    //cores
+    var a = document.getElementById('btn-cor');
+    a.addEventListener('click', mudarCorDeFundo);
+    var b = document.getElementById('btn-cor2');
+    b.addEventListener('click', mudarCorDeFundo);
+    var c = document.getElementById('menu');
+    var d = document.getElementById('nav-menu');
+
+    var titulos = document.getElementsByClassName("hper");
+
+
+    function mudarCorDeFundo() {
+      if (document.body.style.backgroundColor === "black") {
+        // Se for preta, muda para branco
+        document.body.style.backgroundColor = "#3A2F60";
+        for (var i = 0; i < titulos.length; i++) {
+          titulos[i].style.color = '#494193';
+        }
+        c.style.backgroundColor = '#3A2F60';
+        d.style.backgroundColor = '#3A2F60'
+      } else {
+        // Se for outra cor, muda para preto
+        document.body.style.backgroundColor = "black";
+        for (var i = 0; i < titulos.length; i++) {
+          titulos[i].style.color = 'black';
+        }
+        c.style.backgroundColor = 'black';
+        d.style.backgroundColor = 'black';
+      }
+    }
+  </script>
+
+</body>
+
+</html>

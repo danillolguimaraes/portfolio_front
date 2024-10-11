@@ -1,0 +1,28 @@
+{
+  "name": "meuportifolio",
+  "version": "1.0.0",
+  "description": "This is my Portfolio from Front End work",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "gulp": "gulp",
+    "gulp-sass": "gulp-sass",
+    "sass": "sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danillo Guimarães",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-obfuscate": "^0.2.9",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.77.6"
+  },
+  "dependencies": {
+    "popper.js": "^1.16.1"
+  }
+}
