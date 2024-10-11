@@ -5,9 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "gulp": "gulp",
-    "gulp-sass": "gulp-sass",
-    "sass": "sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Danillo Guimarães",
