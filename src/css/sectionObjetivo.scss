@@ -1,0 +1,42 @@
+@use 'variaveis';
+
+@mixin propFonts {
+  font-family: "inter", sans-serif;
+}
+
+#Objetivo {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden; // Evitar que elementos vazem da seção
+  background-color: variaveis.$corSecoes;
+  @include propFonts();
+
+
+  .content {
+    display: block;
+    width: 100%;
+    padding-bottom: 64px;
+
+    h2 {
+      padding-top: 64px;
+      color: variaveis.$fontColor3;
+      font-weight: bold;
+      font-size: 36px;
+    }
+
+    p {
+      justify-content: flex-start;
+      @include propFonts();
+      font-size: 20px;
+      padding-top: 32px;
+      margin: 0 auto;
+      display: flex;
+      width: 100%; // Corrigir largura para 100%
+      flex-wrap: wrap;
+      color: #626262;
+      text-align: left;
+    }
+  }
+}

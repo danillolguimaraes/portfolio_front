@@ -1,0 +1,186 @@
+@use 'variaveis';
+
+@mixin propFonts {
+  font-family: "inter", sans-serif;
+}
+
+#Projetos {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden; // Evitar que elementos vazem da seção
+  @include propFonts();
+
+  .content {
+    display: block;
+    width: 100%;
+    padding-bottom: 64px;
+
+    .pcenter {
+      padding-top: 64px;
+      width: 100%;
+      display: block;
+      position: relative;
+      color: variaveis.$fontColor1;
+
+      h2 {
+        @include propFonts();
+        font-weight: bold;
+        font-size: 36px;
+        font-size: 36px;
+      }
+    }
+
+    .pcontent {
+      padding-top: 64px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      /* Permite que os itens possam ocupar múltiplas linhas */
+      justify-content: space-between;
+      /* Espaça uniformemente os cards */
+      gap: 16px;
+
+      /* Espaço entre os cards */
+
+
+      .card {
+        flex: 1 1 calc(33.333% - 16px);
+        /* Cada card ocupa 1/3 da linha menos o espaço da margem */
+        max-width: calc(33.333% - 16px);
+        /* Garante que o card não ultrapasse 1/3 da largura */
+        margin-bottom: 16px;
+        /* Espaçamento entre as linhas de cards */
+        cursor: pointer;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+
+        a {
+          color: inherit;
+          /* ou outra cor, como 'black' */
+          text-decoration: none;
+          /* Remove o sublinhado */
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover {
+          box-shadow: 0 0 20px 10px rgba(245, 227, 153, 0.8);
+          /* Cor da borda ao passar o mouse */
+          transition: width 2s, height 2s, transform 0.5s;
+          transform: scale(1.20);
+          height: auto;
+          z-index: 9999;
+          /* Aplica o zoom leve */
+
+          .overlay {
+            display: none;
+          }
+
+          .card-title {
+            display: none;
+          }
+        }
+
+        //hover
+      }
+
+      .card-img-overlay {
+        z-index: 2;
+        border-bottom: 2px solid variaveis.$fontColor1;
+      }
+
+      .card-title {
+        position: relative;
+        z-index: 2;
+        /* Mantém o texto acima da overlay */
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        /* Altera de inline-flex para flex para funcionar corretamente */
+        justify-content: center;
+        /* Alinha verticalmente ao centro */
+        align-items: center;
+        /* Alinha horizontalmente ao centro */
+        height: 100%;
+        /* Garante que o contêiner ocupe todo o espaço vertical do card */
+      }
+
+    }
+
+    .ptitle {
+      padding-top: 32px;
+      display: flex;
+
+      h3 {
+        border-bottom: 2px solid #ffff;
+        font-weight: bold;
+      }
+    }
+
+
+  }
+
+  //content
+}
+
+//projetos
+
+@media screen and (max-width: 1024px) {
+  .card-title {
+    position: relative;
+    z-index: 2;
+    /* Mantém o texto acima da overlay */
+    width: 100%;
+    font-size: 18px !important;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    /* Altera de inline-flex para flex para funcionar corretamente */
+    justify-content: center;
+    /* Alinha verticalmente ao centro */
+    align-items: center;
+    /* Alinha horizontalmente ao centro */
+    height: 100%;
+    /* Garante que o contêiner ocupe todo o espaço vertical do card */
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .card {
+    flex: 1 1 calc(50% - 16px) !important;
+    /* Cada card ocupa 50% da linha menos a margem */
+    max-width: calc(50% - 16px) !important;
+    /* Garante que o card não ultrapasse 50% da largura */
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    &:hover {
+      transition: width 2s, height 2s, transform 0.5s;
+      transform: scale(1.10) !important;
+    }
+  }
+
+  .card-title {
+    position: relative;
+    z-index: 2;
+    /* Mantém o texto acima da overlay */
+    width: 100%;
+    font-size: 14px !important;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    /* Altera de inline-flex para flex para funcionar corretamente */
+    justify-content: center;
+    /* Alinha verticalmente ao centro */
+    align-items: center;
+    /* Alinha horizontalmente ao centro */
+    height: 100%;
+    /* Garante que o contêiner ocupe todo o espaço vertical do card */
+  }
+}

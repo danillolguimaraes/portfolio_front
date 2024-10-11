@@ -1,0 +1,40 @@
+@use 'reset';
+@use 'bootstrap';
+@use 'variaveis';
+@use 'menu';
+@use 'cardcss';
+@use 'sectionProfile';
+@use 'sectionAbout';
+@use 'sectionProjetos';
+@use 'sectionObjetivo';
+@use 'sectionContatos';
+
+body {
+  background-color: variaveis.$corBackground;
+  transition: background 1s;
+}
+
+#btn-cor {
+  position: relative;
+  width: 100px;
+  height: 48px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 2.5px 0 #39a2db59;
+  cursor: pointer;
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #053742;
+  transition: left 1s;
+}
+
+.ball-move {
+  left: calc(100% - 40px);
+}

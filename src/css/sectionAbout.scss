@@ -1,0 +1,229 @@
+@use 'variaveis';
+
+@mixin propFonts {
+  font-family: "inter", sans-serif;
+}
+
+#sectionAbout {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  height: auto; // Ajuste a altura para ser automática com base no conteúdo
+  min-height: 100vh; // Certifique-se de que a altura mínima ocupe toda a tela
+  background-color: variaveis.$corSecoes;
+  overflow: hidden; // Evitar que elementos vazem da seção
+
+  .content {
+    width: 100%; // Garantir que o container ocupe 100% da largura do viewport
+    display: flex;
+    flex-direction: column; // Certificar que os elementos fiquem em coluna
+
+    .maisSobre {
+      padding-top: 64px;
+      margin: 0 auto;
+      width: 100%; // Corrigir para manter o 100% da largura
+      height: auto; // Deixar a altura flexível conforme o conteúdo
+      text-align: center;
+
+      h2 {
+        color: variaveis.$fontColor3;
+        @include propFonts();
+        font-weight: bold;
+        font-size: 36px;
+      }
+
+      p {
+        justify-content: flex-start;
+        @include propFonts();
+        font-size: 20px;
+        padding-top: 32px;
+        margin: 0 auto;
+        display: flex;
+        width: 100%; // Corrigir largura para 100%
+        flex-wrap: wrap;
+        color: #626262;
+        text-align: left;
+      }
+
+    }
+  }
+
+
+  .habilidades {
+    margin: 0 auto;
+    padding-bottom: 64px; // Adicionar um espaçamento inferior para evitar sobreposição
+    max-width: 800px; // Assegurar que a largura máxima seja de 800px para responsividade
+    width: 100%; // Definir a largura para 100%
+    box-sizing: border-box !important;
+
+    h2 {
+      padding-bottom: 60px;
+    }
+
+
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12.28%;
+        height: 60px;
+        background-color: variaveis.$corBackground;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.20);
+          box-shadow: 0 0 20px 10px rgba(208, 153, 245, 0.8);
+        }
+
+        p,
+        img,
+        span {
+          margin: 0 auto;
+          padding: 0;
+          text-align: center;
+          width: 100%;
+          justify-content: center;
+          line-height: normal;
+          color: variaveis.$fontColor2;
+          font-family: "Sofadi One", system-ui;
+          font-weight: 400;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  #resp {
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    display: flex;
+    /* Usa Flexbox para facilitar a centralização */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 auto;
+    /* Garante que o elemento em si esteja centralizado */
+    height: 100px;
+    /* Defina uma altura, se quiser centralizar verticalmente */
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .habilidades {
+    margin: 0 auto;
+    padding-bottom: 64px; // Adicionar um espaçamento inferior para evitar sobreposição
+    max-width: 800px; // Assegurar que a largura máxima seja de 800px para responsividade
+    width: 100%; // Definir a largura para 100%
+
+    h2 {
+      padding-bottom: 60px;
+    }
+
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12.28%;
+        height: 60px;
+        background-color: variaveis.$corBackground;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05) !important;
+          box-shadow: 0 0 20px 10px rgba(208, 153, 245, 0.8);
+        }
+
+        p,
+        img,
+        span {
+          margin: 0 auto;
+          padding: 0;
+          text-align: center;
+          width: 100%;
+          justify-content: center;
+          line-height: normal;
+          color: variaveis.$fontColor2;
+          font-family: "Sofadi One", system-ui;
+          font-weight: 400;
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 670px) {
+  .habilidades {
+    margin: 0 auto;
+    padding-bottom: 64px; // Adicionar um espaçamento inferior para evitar sobreposição
+    max-width: 800px; // Assegurar que a largura máxima seja de 800px para responsividade
+    width: 100%; // Definir a largura para 100%
+
+    h2 {
+      padding-bottom: 60px;
+    }
+
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        height: 60px;
+        background-color: variaveis.$corBackground;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05) !important;
+          box-shadow: 0 0 20px 10px rgba(208, 153, 245, 0.8);
+        }
+
+        p,
+        img,
+        span {
+          margin: 0 auto;
+          padding: 0;
+          text-align: center;
+          width: 100%;
+          justify-content: center;
+          line-height: normal;
+          color: variaveis.$fontColor2;
+          font-family: "Sofadi One", system-ui;
+          font-weight: 400;
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+}
